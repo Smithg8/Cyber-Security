@@ -1,0 +1,65 @@
+// Cyber Security Portfolio 1
+
+
+
+Virtual
+Machine: 1 Ubuntu Gateway & Router
+Use case(s)
+- As an internet access gateway for WordPress and Kali virtual machines.
+- As a network Firewall
+Late Portfolio Submissions
+For each week that a portfolio is late, 10 marks will be deducted from the portfolio score that is
+awarded.
+
+
+Resources for this Portfolio Lab
+This lab requires 5 virtual machines. Details for each machine are summarised in Table 1, Table 2,
+Table 3, Table 4 and Table 5 respectively.
+How will the sandboxed network be used?
+You will use this sandboxed network throughout the module for practical labs, some of which
+count as contributions towards your coursework portfolio (worth 60% of the total module marks).
+Figure 1: Sandboxed Network Diagram
+Resources for this Portfolio Lab
+This lab requires 5 virtual machines. Details for each machine are summarised in Table 1, Table 2,
+Table 3, Table 4 and Table 5 respectively.
+Virtual
+Machine: 1
+Ubuntu Gateway & Router
+CPUs 1
+Network
+Adaptor 1 NAT
+Network
+Adaptor 2
+192.168.123.1
+Source USB drive from instructor
+Username student
+Password Student1
+
+
+TASK: Complete the following activities:
+1. Install a Windows 10 virtual machine using an .iso file (available from your instructor).
+2. Set Network Adapter 1 to Internal Network.
+3. Disable all other network adaptors.
+4. Change the Windows 10 Hostname.
+5. Give your Windows 10 fixed IP address of 192.168.123.40
+6. Configure Windows 10 to use the Ubuntu Gateway to access the internet.
+7. Test internet access.
+8. Test successful browsing to your WordPress VMs.
+
+
+Network Settings for Ubuntu 14.04
+Network Settings for Bitnami-elk (Debian 11)
+Uncomment the line: #Google:......
+sudo nano /etc/network/interfaces
+# The primary network interface
+auto eth0
+iface eth0 inet static
+address 192.168.123.20
+netmask 255.255.255.0
+gateway 192.168.123.1
+network 192.168.0.0
+broadcast 192.168.123.255
+dns-nameservers 8.8.8.8 8.8.4.4
+
+
+Configure windows Dns, and IP to Gateway(192.168.123.1) and 8.8.4.4
